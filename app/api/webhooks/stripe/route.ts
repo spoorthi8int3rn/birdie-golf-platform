@@ -3,7 +3,7 @@ import { stripe, POOL_CONTRIBUTION } from '@/lib/stripe'
 import { createAdminSupabaseClient } from '@/lib/supabase-server'
 import Stripe from 'stripe'
 
-export const config = { api: { bodyParser: false } }
+// App Router handles raw body automatically via req.text() — no config needed
 
 async function syncSubscription(
   supabase: ReturnType<typeof createAdminSupabaseClient>,
